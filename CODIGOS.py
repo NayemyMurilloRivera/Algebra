@@ -2,8 +2,10 @@
 PASOS RELEVANTES QUE USA PARA HALLAR ESTE RESIDUO:
 La funcion potencia modulo lo que hace es elevar un numero ("base") a una E("exponente") y luego de eso este se divide por un modulo ("n").
 
-
-
+a.	(1 punto) PASOS RELEVANTES QUE USA PARA HALLAR ESTE RESIDUO
+b.	(1 punto) Finalidad de cada una de las variables locales utilizadas
+c.	(1 punto) Finalidad de cada una de las funciones invocadas en el proceso
+resaltame esas en comentarios mas claros
 """ 
 
 def potenciamodulo(base, exponente, n):
