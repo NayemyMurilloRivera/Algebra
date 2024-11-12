@@ -1,12 +1,33 @@
-def exponenciacion_modular(base, exponente, n):
-    resultado = 1
-    base = base % n
+"""
+PASOS RELEVANTES QUE USA PARA HALLAR ESTE RESIDUO:
+La funcion potencia modulo lo que hace es elevar un numero ("base") a una E("exponente") y luego de eso este se divide por un modulo ("n").
+
+
+
+""" 
+
+def potenciamodulo(base, exponente, n):
+    #2)FINALIDAD DE VARIABLES:
+    resultado = 1 #Aqui es donde se almacena el resultado de la operacion
+    base = base % n # Se esta reasignanado la base para que sea el modulo de "n"
+    #verifica que el exponente sea mayor a 0 (lo vuelve 1)
     while exponente > 0:
+        #si este no es divisible entre 2, entonces se multiplica por la base se hace 
+        #con la finalidad de que el exponente sea par
         if exponente % 2 == 1:
+            #ahora que sabemos que es impar se le multiplicara por la base para que este logre             ser par 
             resultado = (resultado * base) % n
+        #si este ya es par entonces se divide entre 2
         exponente = exponente // 2
+        #
         base = (base * base) % n
+    # y bueno aqui simplemente me devuelve el resultado
     return resultado
+
+print(potenciamodulo(327,128,1425))
+
+
+
 def inverso_modular(a, n):
     t, nuevo_t = 0, 1
     r, nuevo_r = n, a
